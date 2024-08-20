@@ -7,6 +7,14 @@ import green from "../../assets/Green.png"
 import vlc from "../../assets/Vlc.png"
 import py from "../../assets/Python.png"
 const Landing = () => {
+  const breakpoints = {
+    base: '0em', // 0px
+    sm: '30em', // ~480px. em is a relative unit and is dependant on the font size.
+    md: '48em', // ~768px
+    lg: '62em', // ~992px
+    xl: '80em', // ~1280px
+    '2xl': '96em', // ~1536px
+  }
   useEffect(() => {
     const handleScroll = () => {
       //const scrollThreshold =700;
@@ -69,81 +77,89 @@ const Landing = () => {
   return (
     
     <Box 
-        className='Landing'
-        display="flex"
-        flexDirection="column"
-       
-        alignItems="center"
-        bg="radial-gradient(circle farthest-side at 0% 50%, #282828 23.5%, rgba(255, 170, 0, 0) 0) 21px 30px / 40px 60px,
-        radial-gradient(circle farthest-side at 0% 50%, #2c3539 24%, rgba(240, 166, 17, 0) 0) 19px 30px / 40px 60px,
-        linear-gradient(#282828 14%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 85%, #282828 0) 0 0 / 40px 60px,
-        linear-gradient(150deg, #282828 24%, #2c3539 0, #2c3539 26%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 74%, #2c3539 0, #2c3539 76%, #282828 0) 0 0 / 40px 60px,
-        linear-gradient(30deg, #282828 24%, #2c3539 0, #2c3539 26%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 74%, #2c3539 0, #2c3539 76%, #282828 0) 0 0 / 40px 60px,
-        linear-gradient(90deg, #2c3539 2%, #282828 0, #282828 98%, #2c3539 0%) 0 0 / 40px 60px #282828"
+      className='Landing'
+      display="flex"
+      flexDirection="column"
+      w={{base:"100%",md:"100%",lg:"100%"}}
+      alignItems="center"
+      bg="radial-gradient(circle farthest-side at 0% 50%, #282828 23.5%, rgba(255, 170, 0, 0) 0) 21px 30px / 40px 60px,
+      radial-gradient(circle farthest-side at 0% 50%, #2c3539 24%, rgba(240, 166, 17, 0) 0) 19px 30px / 40px 60px,
+      linear-gradient(#282828 14%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 85%, #282828 0) 0 0 / 40px 60px,
+      linear-gradient(150deg, #282828 24%, #2c3539 0, #2c3539 26%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 74%, #2c3539 0, #2c3539 76%, #282828 0) 0 0 / 40px 60px,
+      linear-gradient(30deg, #282828 24%, #2c3539 0, #2c3539 26%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 74%, #2c3539 0, #2c3539 76%, #282828 0) 0 0 / 40px 60px,
+      linear-gradient(90deg, #2c3539 2%, #282828 0, #282828 98%, #2c3539 0%) 0 0 / 40px 60px #282828"
+      
     >
        
         <Box
             w="100%"
-            h="700px"
-           
+            h={{base:"700px",md:"900px",lg:"700px"}}
             display="flex"
-            flexDirection="row"
+            flexDirection={{base:"column",md:"row",lg:"row"}}
             alignItems="center"
             justifyContent="space-around"
             marginBottom="50px"
         >
             <Box
-                display="flex"
-                flexDir="column"
-                justifyContent="center"
+              display="flex"
+              flexDir="column"
+              justifyContent="center"
               
-               
-                
-                //opacity="0.5"
-                boxShadow="5px 5px 40px rgba(255, 255, 255, 0.5)"
-                borderRadius="20px"
-                marginLeft="45px"
-                w="50%"
-                h="500px"
-                fontSize="95px"
-                color="#FFB347"
-                fontFamily="bolder"
+              
+              
+              //opacity="0.5"
+              boxShadow="5px 5px 40px rgba(255, 255, 255, 0.5)"
+              borderRadius="20px"
+              marginLeft={{lg:"45px"}}
+              w={{ base: '350px',sm:"480px", md: '500px', lg: '750px' }}
+              h={{base:"400px",md:"600px",lg:"500px"}}
+              fontSize={{base:"40px",md:"32px",lg:"95px"}}
+              color="#FFB347"
+              fontFamily="bolder"
             >
 
               <Box
                 display="flex"
-                
-                h="90px"
+                flexDirection="row"
+                justifyContent="space-between"
+                w={{base:"300px",md:"400px",lg:"700px"}}
+                h={{base:"60px",md:"55px",lg:"90px"}}
+
               >
-                <p
-                  style={{ lineHeight: "90px",paddingLeft: "30px" }}
+                <Text
+                  lineHeight={{base:"60px",md:"25px",lg:"80px"}}
+                  style={{ paddingLeft: "30px" }}
                   className='para'
                 >Free Open
-                </p>
-                <p
-                  style={{marginLeft:"85px",fontSize:"75px"}}
+                </Text>
+                <Text
+                  fontSize={{base:"30px",md:"25px",lg:"75px"}}
 
                 >
                   🚀
-                </p>
+                </Text>
 
           
               </Box>
+
                
-               <p
-                    style={{ lineHeight: "90px",paddingLeft: "30px" }}
+               <Text
+                    lineHeight={{base:"30px",md:"25px",lg:"100px"}}
+                    style={{ paddingLeft: "30px" }}
                     className='para'
-               >Source </p>
-               <p
-                    style={{ lineHeight: "90px",paddingLeft: "30px" }}
+               >Source </Text>
+               <Text
+                     
+                    lineHeight={{base:"60px",md:"25px",lg:"100px"}}
+                    style={{ paddingLeft: "30px" }}
                     className='para'
                >
                     Software
-               </p>
+               </Text>
               <Box
-                fontSize="20px"
+                fontSize={{base:"0.75rem",md:"25px",lg:"20px"}}
                 paddingLeft="30px"
-                paddingTop="30px"
+                paddingTop={{base:"15px",md:"20px",lg:"20px"}}
                 
               >
                 <p className='sentence'>
@@ -156,16 +172,19 @@ const Landing = () => {
             </Box>
            
             <Box
+              display="none"
               w="30%"
               h="500px"
-              display="flex"
+             
               justifyContent="center"
               alignItems="center"
             >
               <Box className="cube-container"
-               
+                display="none"
               >
-                <Box className="cube">
+                <Box className="cube"
+                   w={{ base: '0', md: '0', lg: '0' }}
+                >
                   <Box className="face front">
                     <Image
                       src={linux}
