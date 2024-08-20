@@ -6,6 +6,12 @@ const Navbar = () => {
     const theme={
         cursor:"pointer"
     }
+    const handleClick=(m)=>{
+        window.scrollTo({
+            top:m,
+            behavior: 'smooth',
+          });
+    }
   return (
     <Box 
         className='navbar'
@@ -47,11 +53,13 @@ const Navbar = () => {
         >
             <a
                 style={theme}
+                onClick={()=>handleClick(0)}
             >
                 Home
             </a>
             <a
                 style={theme}
+                onClick={()=>handleClick(800)}
             >
                 About us
             </a>
@@ -67,9 +75,9 @@ const Navbar = () => {
             justifyContent="center"
             alignItems="center"
         >
-            <button class="button" data-text="Awesome">
-                <span class="actual-text">&nbsp;join us&nbsp;</span>
-                <span aria-hidden="true" class="hover-text">
+            <button className="button" data-text="Awesome">
+                <span className="actual-text">&nbsp;join us&nbsp;</span>
+                <span aria-hidden="true" className="hover-text">
                 &nbsp;join us&nbsp;</span>
             </button>
 
