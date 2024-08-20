@@ -7,14 +7,16 @@ const Navbar = () => {
         cursor:"pointer"
     }
     const handleClick=(m)=>{
-       
-        
+        console.log(m)
+        if(window.scrollY!==m){
             const targetPosition =m; // Target scroll position in pixels
-            const startPosition = window.pageYOffset; // Current scroll position
+            const startPosition = window.scrollY; // Current scroll position
             const distance = targetPosition - startPosition;
-            const duration = 1500; // Duration in milliseconds
+            const duration =1500; // Duration in milliseconds
             let startTime = null;
-        
+       
+           
+            console.log("start:",startPosition)
             const ease = (t, b, c, d) => {
               t /= d / 2;
               if (t < 1) return c / 2 * t * t + b;
@@ -32,7 +34,7 @@ const Navbar = () => {
         
             requestAnimationFrame(animation);
 
-    }
+    }}
   return (
     <Box 
         className='navbar'
@@ -41,13 +43,14 @@ const Navbar = () => {
         justifyContent="space-between"
         alignItems="center"
         //bgColor="transparent"
-        //bgColor="rgba(0, 0, 0, 0.5)"
+        //bg="rgba(255,255, 255, 1)"
         bg="radial-gradient(circle farthest-side at 0% 50%, #282828 23.5%, rgba(255, 170, 0, 0) 0) 21px 30px / 40px 60px,
         radial-gradient(circle farthest-side at 0% 50%, #2c3539 24%, rgba(240, 166, 17, 0) 0) 19px 30px / 40px 60px,
         linear-gradient(#282828 14%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 85%, #282828 0) 0 0 / 40px 60px,
         linear-gradient(150deg, #282828 24%, #2c3539 0, #2c3539 26%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 74%, #2c3539 0, #2c3539 76%, #282828 0) 0 0 / 40px 60px,
         linear-gradient(30deg, #282828 24%, #2c3539 0, #2c3539 26%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 74%, #2c3539 0, #2c3539 76%, #282828 0) 0 0 / 40px 60px,
         linear-gradient(90deg, #2c3539 2%, #282828 0, #282828 98%, #2c3539 0%) 0 0 / 40px 60px #282828"
+
         
     >
         <Box

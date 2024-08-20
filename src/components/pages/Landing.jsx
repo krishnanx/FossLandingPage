@@ -9,7 +9,7 @@ import py from "../../assets/Python.png"
 const Landing = () => {
   useEffect(() => {
     const handleScroll = () => {
-      const scrollThreshold =700;
+      //const scrollThreshold =700;
       console.log(window.scrollY);
      
     }
