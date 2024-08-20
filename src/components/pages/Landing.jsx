@@ -90,7 +90,7 @@ const Landing = () => {
                 //opacity="0.5"
                 boxShadow="5px 5px 40px rgba(255, 255, 255, 0.5)"
                 borderRadius="20px"
-                marginLeft="70px"
+                marginLeft="45px"
                 w="50%"
                 h="500px"
                 fontSize="95px"
@@ -109,7 +109,7 @@ const Landing = () => {
                 >Free Open
                 </p>
                 <p
-                  style={{marginLeft:"100px",fontSize:"75px"}}
+                  style={{marginLeft:"85px",fontSize:"75px"}}
 
                 >
                   🚀
