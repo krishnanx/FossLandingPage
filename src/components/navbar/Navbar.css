@@ -1,0 +1,73 @@
+.navbar{
+    display: flex;
+    position:relative;
+    flex-direction:row;
+    align-items: center;
+    justify-content:space-between;
+    width:100%;
+    height:75px;
+}
+/* From Uiverse.io by satyamchaudharydev */ 
+/* === removing default button style ===*/
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    position: relative; /* Ensure positioning context for hover-text */
+  }
+  
+  /* button styling */
+  .button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255, 255, 255, 0.6);
+    --animation-color:#cc7700;
+    --fs-size: 1.75rem;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family:  "Montserrat";
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* actual text */
+  .actual-text {
+    display: inline-block; /* Ensure the element takes up the correct width */
+    white-space: nowrap; /* Prevents text from wrapping */
+  }
+  
+  /* this is the text, when you hover on button */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    color: var(--animation-color);
+    width: 0%;
+    height: 100%; /* Ensure it matches the height of the button */
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: width 0.5s; /* Animate width change */
+    -webkit-text-stroke: 1px var(--animation-color);
+    white-space: nowrap; /* Prevents text from wrapping */
+  }
+  
+  /* hover */
+  .button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color));
+  }
+a{
+  font-family:  "Montserrat";
+  font-weight:500;
+
+}
+a:hover{
+  color:#cc7700;
+}
+  

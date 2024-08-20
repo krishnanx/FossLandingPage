@@ -1,0 +1,10 @@
+*{
+  margin:0;
+  padding:0;
+  /*background-color: #0C2445;*/
+  
+}
+::-webkit-scrollbar {
+  width: 15px !important;
+}
+
