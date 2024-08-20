@@ -7,10 +7,31 @@ const Navbar = () => {
         cursor:"pointer"
     }
     const handleClick=(m)=>{
-        window.scrollTo({
-            top:m,
-            behavior: 'smooth',
-          });
+       
+        
+            const targetPosition =m; // Target scroll position in pixels
+            const startPosition = window.pageYOffset; // Current scroll position
+            const distance = targetPosition - startPosition;
+            const duration = 1500; // Duration in milliseconds
+            let startTime = null;
+        
+            const ease = (t, b, c, d) => {
+              t /= d / 2;
+              if (t < 1) return c / 2 * t * t + b;
+              t--;
+              return -c / 2 * (t * (t - 2) - 1) + b;
+            };
+        
+            const animation = (currentTime) => {
+              if (startTime === null) startTime = currentTime;
+              const timeElapsed = currentTime - startTime;
+              const run = ease(timeElapsed, startPosition, distance, duration);
+              window.scrollTo(0, run);
+              if (timeElapsed < duration) requestAnimationFrame(animation);
+            };
+        
+            requestAnimationFrame(animation);
+
     }
   return (
     <Box 
@@ -37,13 +58,24 @@ const Navbar = () => {
             justifyContent="center"
             alignItems="center"
         >
-            <Image 
-            src={logo}
-            w="80px"
-            h="60px"
+            <Button
+                w="80px"
+                h="60px"
+                bg="transparent"
+                padding={0}
+                _hover={{bg:"transparent"}}
+                onClick={()=>handleClick(0)}
             >
+                <Image 
+                    src={logo}
+                    
+                    w="1200px"
+                    h="60px"
+                >
 
-            </Image>
+                </Image>
+            </Button>
+           
         </Box>
         <Box
             w="250px"
@@ -53,6 +85,7 @@ const Navbar = () => {
         >
             <a
                 style={theme}
+                tabindex="-1"
                 onClick={()=>handleClick(0)}
             >
                 Home
@@ -65,6 +98,7 @@ const Navbar = () => {
             </a>
             <a
                 style={theme}
+                onClick={()=>handleClick(1600)}
             >
                 Events
             </a>

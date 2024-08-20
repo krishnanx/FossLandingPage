@@ -65,9 +65,14 @@
 a{
   font-family:  "Montserrat";
   font-weight:500;
+  user-select: none; /* Prevents text selection */
+  -webkit-tap-highlight-color: transparent; /* Removes highlight color on touch devices */
 
 }
 a:hover{
   color:#cc7700;
+}
+a:focus {
+  outline: none;        /* Ensure no outline on focus */
 }
   
