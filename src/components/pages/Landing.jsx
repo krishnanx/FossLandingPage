@@ -81,6 +81,8 @@ const Landing = () => {
       display="flex"
       flexDirection="column"
       w={{base:"100%",md:"100%",lg:"100%"}}
+      h={{base:"900px",md:"1000px",lg:"1600px"}}
+      
       alignItems="center"
       bg="radial-gradient(circle farthest-side at 0% 50%, #282828 23.5%, rgba(255, 170, 0, 0) 0) 21px 30px / 40px 60px,
       radial-gradient(circle farthest-side at 0% 50%, #2c3539 24%, rgba(240, 166, 17, 0) 0) 19px 30px / 40px 60px,
@@ -93,12 +95,13 @@ const Landing = () => {
        
         <Box
             w="100%"
-            h={{base:"700px",md:"900px",lg:"700px"}}
+            h={{base:"5000px",md:"6000px",lg:"700px"}}
             display="flex"
             flexDirection={{base:"column",md:"row",lg:"row"}}
             alignItems="center"
-            justifyContent="space-around"
+            justifyContent="space-evenly"
             marginBottom="50px"
+            marginTop={{base:"50px",lg:"50px"}}
         >
             <Box
               display="flex"
@@ -112,10 +115,11 @@ const Landing = () => {
               borderRadius="20px"
               marginLeft={{lg:"45px"}}
               w={{ base: '350px',sm:"480px", md: '500px', lg: '750px' }}
-              h={{base:"400px",md:"600px",lg:"500px"}}
+              h={{base:"300px",md:"600px",lg:"500px"}}
               fontSize={{base:"40px",md:"32px",lg:"95px"}}
               color="#FFB347"
               fontFamily="bolder"
+              marginBottom={{base:"0"}}
             >
 
               <Box
@@ -172,43 +176,67 @@ const Landing = () => {
             </Box>
            
             <Box
-              display="none"
+              
               w="30%"
-              h="500px"
-             
+              h={{base:"100px",lg:"500px"}}
+              display="flex"
               justifyContent="center"
               alignItems="center"
             >
               <Box className="cube-container"
-                display="none"
+                w={{base:"100px",lg:"200px"}}
+                h={{base:"100px",lg:"200px"}}
+                sx={{
+                  perspective:{base:"900px",lg:"800px"}
+                }} 
               >
                 <Box className="cube"
-                   w={{ base: '0', md: '0', lg: '0' }}
+                   //w={{ base: '0', md: '0', lg: '0' }}
                 >
-                  <Box className="face front">
+                  <Box className="face front"
+                    width= {{base:"125px",lg:"200px"}}
+                    h= {{base:"125px",lg:"200px"}}
+                    sx={{transform: {base:'translateZ(62px)',lg:"translateZ(100px)"}}}
+
+                  >
                     <Image
                       src={linux}
                     >
 
                     </Image>
                   </Box>
-                  <Box className="face back">
+                  <Box className="face back"
+                    width= {{base:"125px",lg:"200px"}}
+                    h= {{base:"125px",lg:"200px"}}
+                    sx={{transform: {base:'rotateY(180deg) translateZ(62px)',lg:"rotateY(180deg) translateZ(100px)"}}}
+                  >
                     
                   </Box>
-                  <Box className="face right">
+                  <Box className="face right"
+                    width= {{base:"125px",lg:"200px"}}
+                    h= {{base:"125px",lg:"200px"}}
+                    sx={{transform: {base:'rotateY(90deg) translateZ(62px)',lg:"rotateY(90deg) translateZ(100px)"}}}
+                  >
                     <Image
                         src={green}
                       >
 
                     </Image>
                   </Box>
-                  <Box className="face left">
+                  <Box className="face left"
+                    width= {{base:"125px",lg:"200px"}}
+                    h= {{base:"125px",lg:"200px"}}
+                    sx={{transform: {base:'rotateY(-90deg) translateZ(62px)',lg:"rotateY(-90deg) translateZ(100px)"}}}
+                  >
                     
                   </Box>
                   <Box className="face top"
                     display="flex"
                     justifyContent="center"
                     alignItems="center"
+                    width= {{base:"125px",lg:"200px"}}
+                    h= {{base:"125px",lg:"200px"}}
+                    sx={{transform: {base:'rotatex(90deg) translateZ(62px)',lg:"rotatex(90deg) translateZ(100px)"}}}
                   >
                     <Image
                       src={py}
@@ -217,7 +245,11 @@ const Landing = () => {
 
                     </Image>
                   </Box>
-                  <Box className="face bottom">
+                  <Box className="face bottom"
+                    width= {{base:"125px",lg:"200px"}}
+                    h= {{base:"125px",lg:"200px"}}
+                    sx={{transform: {base:'rotatex(-90deg) translateZ(62px)',lg:"rotatex(-90deg) translateZ(100px)"}}}
+                  >
                   <Image
                       src={vlc}
                     >

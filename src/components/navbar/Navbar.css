@@ -17,10 +17,9 @@
     padding: 0;
     border: none;
     cursor: pointer;
-    position: relative; /* Ensure positioning context for hover-text */
+    position: relative; 
   }
   
-  /* button styling */
   .button {
     --border-right: 6px;
     --text-stroke-color: rgba(255, 255, 255, 0.6);
@@ -47,21 +46,21 @@
   .hover-text {
     position: absolute;
     box-sizing: border-box;
-    color: var(--animation-color);
+    color: #cc7700;
     width: 0%;
     height: 100%; /* Ensure it matches the height of the button */
     inset: 0;
-    border-right: var(--border-right) solid var(--animation-color);
+    border-right: 6px solid #cc7700;
     overflow: hidden;
     transition: width 0.5s; /* Animate width change */
-    -webkit-text-stroke: 1px var(--animation-color);
+    -webkit-text-stroke: 1px #cc7700;
     white-space: nowrap; /* Prevents text from wrapping */
   }
   
   /* hover */
   .button:hover .hover-text {
     width: 100%;
-    filter: drop-shadow(0 0 23px var(--animation-color));
+    filter: drop-shadow(0 0 23px #cc7700);
   }
 a{
   font-family:  "Montserrat";
