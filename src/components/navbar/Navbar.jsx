@@ -80,7 +80,7 @@ const Navbar = () => {
             h={{base:"10px",md:"100px",lg:"75px"}}
             display="flex"
             flexDirection="row"
-            justifyContent={{base:"space-evenly",lg:"space-between"}}
+            justifyContent={{base:"space-evenly",lg:"flex-end"}}
             alignItems="center"
         >
             <Button ref={btnRef} colorScheme='transparent' onClick={onOpen}
@@ -184,7 +184,7 @@ const Navbar = () => {
                 padding={0}
                 _hover={{bg:"transparent"}}
                 onClick={()=>handleClick(0)}
-                sx={{ '-webkit-tap-highlight-color': 'transparent'}}
+                 sx={{ '-webkit-tap-highlight-color': 'transparent'}}
             >
                 <Image 
                     src={logo}

@@ -137,37 +137,37 @@
   }
   
   .front {
-    
+    transform: translateZ(6px);
     background-color:#FFB347;
     background-image: linear-gradient(160deg, #FFB347 0%, #FFBF69 100%);
   }
   
   .back {
-    
+    transform: rotateY(180deg) translateZ(6px);
     background-color:#FFB347;
     background-image: linear-gradient(160deg, #FFB347 0%, #FFBF69 100%);
   }
   
   .right {
-    
+    transform: rotateY(90deg) translateZ(6px);
     background-color: #FFB347;
     background-image: linear-gradient(160deg, #FFB347 0%, #FFBF69 100%);
   }
   
   .left {
-   
+    transform: rotateY(-90deg) translateZ(6px);
     background-color: #FFB347;
     background-image: linear-gradient(160deg, #FFB347 0%, #FFBF69 100%);
   }
   
   .top {
-    
+    transform: rotateX(90deg) translateZ(6px);
     background-color: #FFB347;
     background-image: linear-gradient(160deg, #FFB347 0%, #FFBF69 100%);
   }
   
   .bottom {
-   
+    transform: rotateX(-90deg) translateZ(6px);
     background-color: #FFB347;
     background-image: linear-gradient(160deg, #FFB347 0%, #FFBF69 100%);
   }
