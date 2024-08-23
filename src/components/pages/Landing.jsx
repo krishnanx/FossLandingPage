@@ -81,7 +81,7 @@ const Landing = () => {
       display="flex"
       flexDirection="column"
       w={{base:"100%",md:"100%",xl:"100%"}}
-      h={{base:"900px",md:"1000px",lg:"1600px",xl:"1600px"}}
+      h={{base:"1600px",md:"1600px",lg:"1600px",xl:"1600px"}}
       
       alignItems="center"
       bg="radial-gradient(circle farthest-side at 0% 50%, #282828 23.5%, rgba(255, 170, 0, 0) 0) 21px 30px / 40px 60px,
@@ -95,7 +95,7 @@ const Landing = () => {
        
         <Box
             w="100%"
-            h={{base:"5000px",md:"6000px",lg:"1000px",xl:"700px"}}
+            h={{base:"750px",md:"900px",lg:"1000px",xl:"700px"}}
             display="flex"
             flexDirection={{base:"column",md:"column",xl:"row"}}
             alignItems="center"
@@ -114,8 +114,8 @@ const Landing = () => {
               boxShadow="5px 5px 40px rgba(255, 255, 255, 0.5)"
               borderRadius="20px"
               marginLeft={{xl:"45px"}}
-              w={{ base: '350px',sm:"480px", md: '600px', xl: '750px' }}
-              h={{base:"300px",md:"500px",lg:"400px",xl:"500px"}}
+              w={{ base: '350px',sm:"380px", md: '600px', xl: '750px' }}
+              h={{base:"300px",md:"450px",lg:"400px",xl:"500px"}}
               fontSize={{base:"40px",md:"65px",xl:"95px"}}
               color="#FFB347"
               fontFamily="bolder"

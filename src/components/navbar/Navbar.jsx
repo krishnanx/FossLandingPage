@@ -77,7 +77,7 @@ const Navbar = () => {
     >
         <Box
             w={{base:"160px",md:"100px",lg:"100px"}}
-            h={{base:"10px",md:"100px",lg:"75px"}}
+            h={{base:"70px",md:"100px",lg:"75px"}}
             display="flex"
             flexDirection="row"
             justifyContent={{base:"space-evenly",lg:"flex-end"}}
@@ -105,9 +105,9 @@ const Navbar = () => {
             >
                 <DrawerOverlay/>
                 <DrawerContent bg={background}>
-                {<DrawerCloseButton 
+                {/*<DrawerCloseButton 
                     sx={{ '-webkit-tap-highlight-color': 'transparent'}}
-                />}
+                />*/}
                 
                 <DrawerBody>
                 <Box
