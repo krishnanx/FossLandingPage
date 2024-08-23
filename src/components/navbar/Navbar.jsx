@@ -84,7 +84,7 @@ const Navbar = () => {
             alignItems="center"
         >
             <Button ref={btnRef} colorScheme='transparent' onClick={onOpen}
-                display={{base:"flex",md:"",lg:"none"}}
+                display={{base:"flex",md:"none",lg:"none"}}
                 sx={{
                     '-webkit-tap-highlight-color': 'transparent',
                   }}   
@@ -198,7 +198,7 @@ const Navbar = () => {
            
         </Box>
         <Box
-            w={{base:"70px",md:"100px",lg:"300px"}}
+            w={{base:"70px",md:"300px",lg:"300px"}}
             display={{base:"none",md:"flex",lg:"flex"}}
             justifyContent="space-between"
             color='white'
@@ -227,7 +227,7 @@ const Navbar = () => {
             </Link>
         </Box>
         <Box
-            w={{base:"160px",md:"100px",lg:"170px"}}
+            w={{base:"160px",md:"160px",lg:"170px"}}
             display="flex"
             justifyContent="center"
             alignItems="center"

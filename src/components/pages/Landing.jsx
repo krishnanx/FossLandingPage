@@ -80,8 +80,8 @@ const Landing = () => {
       className='Landing'
       display="flex"
       flexDirection="column"
-      w={{base:"100%",md:"100%",lg:"100%"}}
-      h={{base:"900px",md:"1000px",lg:"1600px"}}
+      w={{base:"100%",md:"100%",xl:"100%"}}
+      h={{base:"900px",md:"1000px",lg:"1600px",xl:"1600px"}}
       
       alignItems="center"
       bg="radial-gradient(circle farthest-side at 0% 50%, #282828 23.5%, rgba(255, 170, 0, 0) 0) 21px 30px / 40px 60px,
@@ -95,13 +95,13 @@ const Landing = () => {
        
         <Box
             w="100%"
-            h={{base:"5000px",md:"6000px",lg:"700px"}}
+            h={{base:"5000px",md:"6000px",lg:"1000px",xl:"700px"}}
             display="flex"
-            flexDirection={{base:"column",md:"row",lg:"row"}}
+            flexDirection={{base:"column",md:"column",xl:"row"}}
             alignItems="center"
             justifyContent="space-evenly"
             marginBottom="50px"
-            marginTop={{base:"50px",lg:"50px"}}
+            marginTop={{base:"50px",xl:"50px"}}
         >
             <Box
               display="flex"
@@ -113,10 +113,10 @@ const Landing = () => {
               //opacity="0.5"
               boxShadow="5px 5px 40px rgba(255, 255, 255, 0.5)"
               borderRadius="20px"
-              marginLeft={{lg:"45px"}}
-              w={{ base: '350px',sm:"480px", md: '500px', lg: '750px' }}
-              h={{base:"300px",md:"600px",lg:"500px"}}
-              fontSize={{base:"40px",md:"32px",lg:"95px"}}
+              marginLeft={{xl:"45px"}}
+              w={{ base: '350px',sm:"480px", md: '600px', xl: '750px' }}
+              h={{base:"300px",md:"500px",lg:"400px",xl:"500px"}}
+              fontSize={{base:"40px",md:"65px",xl:"95px"}}
               color="#FFB347"
               fontFamily="bolder"
               marginBottom={{base:"0"}}
@@ -126,18 +126,18 @@ const Landing = () => {
                 display="flex"
                 flexDirection="row"
                 justifyContent="space-between"
-                w={{base:"300px",md:"400px",lg:"700px"}}
-                h={{base:"60px",md:"55px",lg:"90px"}}
+                w={{base:"300px",md:"550px",xl:"700px"}}
+                h={{base:"60px",md:"55px",xl:"90px"}}
 
               >
                 <Text
-                  lineHeight={{base:"60px",md:"25px",lg:"80px"}}
+                  lineHeight={{base:"60px",md:"50px",xl:"80px"}}
                   style={{ paddingLeft: "30px" }}
                   className='para'
                 >Free Open
                 </Text>
                 <Text
-                  fontSize={{base:"30px",md:"25px",lg:"75px"}}
+                  fontSize={{base:"30px",md:"65px",xl:"75px"}}
 
                 >
                   🚀
@@ -148,22 +148,22 @@ const Landing = () => {
 
                
                <Text
-                    lineHeight={{base:"30px",md:"25px",lg:"100px"}}
+                    lineHeight={{base:"30px",md:"70px",xl:"100px"}}
                     style={{ paddingLeft: "30px" }}
                     className='para'
                >Source </Text>
                <Text
                      
-                    lineHeight={{base:"60px",md:"25px",lg:"100px"}}
+                    lineHeight={{base:"60px",md:"70px",xl:"100px"}}
                     style={{ paddingLeft: "30px" }}
                     className='para'
                >
                     Software
                </Text>
               <Box
-                fontSize={{base:"0.75rem",md:"25px",lg:"20px"}}
+                fontSize={{base:"0.75rem",md:"20px",xl:"20px"}}
                 paddingLeft="30px"
-                paddingTop={{base:"15px",md:"20px",lg:"20px"}}
+                paddingTop={{base:"15px",md:"30px",xl:"20px"}}
                 
               >
                 <p className='sentence'>
@@ -178,7 +178,7 @@ const Landing = () => {
             <Box
               
               w="30%"
-              h={{base:"100px",lg:"500px"}}
+              h={{base:"100px",lg:"400px",xl:"500px"}}
               display="flex"
               justifyContent="center"
               alignItems="center"
